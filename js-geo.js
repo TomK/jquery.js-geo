@@ -20,6 +20,7 @@
 */
 
 ;(function($){
+	$(function () {
 	if (navigator && navigator.geolocation) {
                 $('.js-geo').each(function () {
 			function jsGeoFind() {
@@ -51,4 +52,5 @@
 	                $('<div class="js-geo-find"></div>').css({top:t,left:l}).insertAfter(this).click(jsGeoFind);
 	        });
 	}
+	});
 })(jQuery);
