@@ -31,7 +31,7 @@
 					var loc = location.coords.latitude+','+location.coords.longitude;
 					if (location.address && location.address.postalCode)
 						loc = location.address.postalCode;
-					if (google && google.maps && google.maps.Geocoder) {
+					if ((typeof google != "undefined") && google.maps && google.maps.Geocoder) {
 						var geo = new google.maps.Geocoder();
 						var latLngObj = new google.maps.LatLng(location.coords.latitude,location.coords.longitude);
 						geo.geocode({latLng:latLngObj},function (results,status) {
